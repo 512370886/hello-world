@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p></p>
+		<p></p>
+		<script type="text/javascript">
+			var myP=document.querySelectorAll('p');
+			setInterval('zxsj(new Date())',1);//每1毫秒调用一次函数
+			function zxsj(e){
+				//获取
+				var year=e.getFullYear();//年  四位数字
+				var month=e.getMonth()+1;//月 	0 ~ 11
+				var day=e.getDate();//天 1~31
+				var h=buling(e.getHours());//小时 0~23
+				var m=buling(e.getMinutes());//分钟  0~59
+				var s=buling(e.getSeconds());//秒 0~59
+				var ms=e.getMilliseconds();//毫秒 0~999
+				myP[0].innerText=year+"年"+month+"月"+day+"日 "+h+"时"+m+"分"+s+"秒"+ms+"毫秒";
+				//修改
+				e.setFullYear(2018);//修改年份
+				e.setMonth(9);//修改月份 9表示10月
+				year2=e.getFullYear();//重新获取年份。
+				month2=e.getMonth()+1;//重新获取月份。显示月份时，需要加一
+				myP[1].innerText=year2+"年"+month2+"月"+day+"日 "+h+"时"+m+"分"+s+"秒"+ms+"毫秒";
+			}
+			function buling(val){
+				if(val<10){
+					 return "0"+val
+				}else{
+					return val
+				}
+			}
+		</script>
+	</body>
+</html>
