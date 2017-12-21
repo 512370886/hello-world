@@ -60,7 +60,7 @@ function getTarget(ev){
                 }
             }
         },
-js 对象冒充
+//js 对象冒充
 <script type="text/javascript">
   
     function Person(name , age){
@@ -93,13 +93,10 @@ js 异步加载和同步加载
 同步模式又称阻塞模式，会阻止流览器的后续处理。停止了后续的文件的解析，执行，如图像的渲染。浏览器之所以会采用同步模式，是因为加载的js文件中有对dom的操作，重定向，输出document等默认行为，所以同步才是最安全的。
 通常会把要加载的js放到body结束标签之前，使得js可在页面最后加载，尽量减少阻塞页面的渲染。这样可以先让页面显示出来。
 同步加载流程是瀑布模型，异步加载流程是并发模型。
+
 js获取屏幕坐标
-     
-     
-     
     获取鼠标坐标
- 
- 
+    
 <script type="text/javascript">
     function mousePosition(ev){
         if(ev.pageX || ev.pageY){

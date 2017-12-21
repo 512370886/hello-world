@@ -222,7 +222,7 @@ this.moveBind = function (objId, eventType, callBack) {
         obj['on' + eventType] = null;
     }
 }
-回车提交
+//回车提交
 $("id").onkeypress = function (event) {
     event = (event) ? event : ((window.event) ? window.event : "")
     keyCode = event.keyCode ? event.keyCode : (event.which ? event.which : event.charCode);
@@ -230,11 +230,11 @@ $("id").onkeypress = function (event) {
         $("SubmitLogin").onclick();
     }
 }
-JS 执行计时器
+//JS 执行计时器
 timeStart = new Date().getTime();
 timesEnd = new Date().getTime();
 document.getElementById("time").innerHTML = timesEnd - timeStart;
-JS 写Cookie
+//JS 写Cookie
 function setCookie(name, value, expires, path, domain) {
     if (!expires) expires = -1;
     if (!path) path = "/";
@@ -261,7 +261,7 @@ function setCookie(name, value, expires, path, domain) {
     }
     document.cookie = name + "=" + value + ";path=" + path + e + dm;
 };
-JS 读Cookie
+//JS 读Cookie
 function readCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
@@ -273,7 +273,7 @@ function readCookie(name) {
         }
     } return null
 }
-Ajax 请求
+//Ajax 请求
 C.ajax = function (args) {
     var self = this;
     this.options = {
@@ -334,7 +334,7 @@ C.ajax = function (args) {
     };
     this.send();
 };
-JS StringBuilder 用法
+//JS StringBuilder 用法
 function StringBuilder() {
     this.strings = new Array;
 };
@@ -344,7 +344,7 @@ StringBuilder.prototype.append = function (str) {
 StringBuilder.prototype.toString = function () {
     return this.strings.join('');
 };
-JS 加载到顶部LoadJS
+//JS 加载到顶部LoadJS
 function loadJS (url, fn) {
         var ss = document.getElementsByName('script'),
             loaded = false;
@@ -409,11 +409,11 @@ function ClearHeadJs  (src) {
         }
         document.getElementsByTagName('head')[0].removeChild(obj);
     };
-JS 替换非法字符主要用在密码验证上出现的特殊字符
+//JS 替换非法字符主要用在密码验证上出现的特殊字符
 function URLencode(sStr) {
     return escape(sStr).replace(/\+/g, '%2B').replace(/\"/g, '%22').replace(/\'/g, '%27').replace(/\//g, '%2F');
 };
-按Ctrl + Entert 直接提交表单
+//按Ctrl + Entert 直接提交表单
 document.body.onkeydown = function (evt) {
     evt = evt ? evt : (window.event ? window.event : null);
     if (13 == evt.keyCode && evt.ctrlKey) {
@@ -422,7 +422,7 @@ document.body.onkeydown = function (evt) {
         PostData();
     }
 };
-获取当前时间
+//获取当前时间
 function GetCurrentDate() {
         var d = new Date();
         var y = d.getYear()+1900;
@@ -438,14 +438,14 @@ function GetCurrentDate() {
         if (temp < 10) return "0" + temp;
         else return temp;
     }
-Js 去掉空格方法
+//Js 去掉空格方法
 String.prototype.Trim = function()
 { return this.replace(/(^\s*)|(\s*$)/g, ""); }
 String.prototype.LTrim = function()
 {return this.replace(/(^\s*)/g, "");}
 String.prototype.RTrim = function()
 {return this.replace(/(\s*$)/g, "");}
-Js 去掉空格方法
+//Js 去掉空格方法
 this.ClearHeadJs = function (src) {
     var js = document.getElementsByTagName('head')[0].children;
     var obj = null;
@@ -456,7 +456,7 @@ this.ClearHeadJs = function (src) {
     }
     document.getElementsByTagName('head')[0].removeChild(obj);
 };
-整个UL 点击事件 加在UL里的onclick里
+//整个UL 点击事件 加在UL里的onclick里
 function CreateFrom(url, params) {
      var f = document.createElement("form");
      f.setAttribute("action", url);
@@ -471,7 +471,7 @@ function CreateFrom(url, params) {
      document.body.appendChild(f);
      f.submit();
  };
-判断浏览器使用的是哪个 JS 版本
+//判断浏览器使用的是哪个 JS 版本
 <script language="javascript">
       var jsversion = 1.0;
     </script>

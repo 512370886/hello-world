@@ -75,7 +75,7 @@ createTextNode用来创建一个文本节点，用法如下：
 var textNode = document.createTextNode("一个TextNode");
 createTextNode接收一个参数，这个参数就是文本节点中的文本，和createElement一样，创建后的文本节点也只是独立的一个节点，同样需要appendChild将其添加到HTML文档树中
 cloneNode
-cloneNode是用来返回调用方法的节点的一个副本，它接收一个bool参数，用来表示是否复制子元素，使用如下：
+cloneNode是用来返回调用方法的节点的一个副本，它接收一个boolean参数，用来表示是否复制子元素，使用如下：
 var parent = document.getElementById("parentElement"); 
 var parent2 = parent.cloneNode(true);// 传入true
 parent2.id = "parent2";
